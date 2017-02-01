@@ -1,0 +1,22 @@
+From b1f4160805acf493cec8c52c954bbaa42c9c7087 Mon Sep 17 00:00:00 2001
+From: simbulu <torkil.zachariassen@gmail.com>
+Date: Fri, 2 Sep 2016 14:19:01 +0100
+Subject: [PATCH] defining isdigit in midi.c
+
+included ctype.h in midi.c in order to define isdigit
+---
+ src/main/c/midi.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/main/c/midi.c b/src/main/c/midi.c
+index 2e47bfd..118ce75 100644
+--- a/src/main/c/midi.c
++++ b/src/main/c/midi.c
+@@ -32,6 +32,7 @@
+ #include "config.h"
+ #include "smf.h"
+ #include "midi.h"
++#include <ctype.h>
+ 
+ int
+ strcmp_min(char *s1, char *s2) {
